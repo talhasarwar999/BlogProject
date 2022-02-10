@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>{% block title %}   {% endblock title %}</title>
+    <style>
+        .commentt a{
+          text-decoration: none;
+        }
+      form .repdel{
+        text-decoration: none;
+      }
+      .commentt .fa-thumbs-o-up{
+        font-size:30px;
+      }
+      header .navbar
+      {
+        background-color: #7952B3;
+      }
+      header .navbar-brand
+      {
+        font-family: 'Brush Script MT', cursive;
+        font-size: 29px;
+      }
+      .borders{
+        background-color: #F0F2F5;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+    <nav class="navbar navbar-expand-lg navbar-light text-white">
+        <a class="navbar-brand text-white" href="">Blogs</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item {% block homeactive %}  {% endblock homeactive %}">
+              <a class="nav-link text-white mx-2" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item {% block aboutactive %}  {% endblock aboutactive %}" >
+              <a class="nav-link text-white mx-2" href="/about">About</a>
+            </li>
+            <li class="nav-item {% block contactactive %}  {% endblock contactactive %} ">
+              <a class="nav-link text-white mx-2" href="/contact">Contact</a>
+            </li>
+            <li class="nav-item {% block blogactive %}  {% endblock blogactive %} ">
+              <a class="nav-link text-white mx-2" href="/blog">Blog</a>
+            </li>
+            
+          </ul>
+          <div class="ml-auto form-inline ">
+    
+
+     
+
+{% if user.is_authenticated %}
+ <form method="get" action="/search" class="my-2 my-lg-0 mx-3">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="query" id="query">
+            <button class="btn btn-outline-success ml-2 text-white" type="submit">Search</button> 
+          </form>
+<ul class="navbar-nav mr-2">
+<li class="nav-item dropdown">
+<a class=" btn btn-secondary nav-link dropdown-toggle text-white" href='#' id="navbarDropdown" role="button" data-toggle="dropdown"> Welcome: {{user.username}}</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/logout">Logout</a>
+
+        </div>
+      </li> 
+      <li>{% for as in backends.associated %}
+          {% if as.provider == 'facebook' %}
+            <div class="col-md-6 text-center">
+                <img src="{{as.extra_data.picture.data.url}}" alt="" width="50" height="50" style="border-radius: 50%">
+            </div>
+            <!-- <div class="col-md-6 social-container my-2"><p> Signed in via:  {{ ass.provider }} </p>
+                <p> Name:  {{ as.extra_data.name }} </p>
+                <p> Provider url: <a href="{{as.extra_data.profile_url}}">link</a></p>
+            </div> -->
+          {% endif %}
+        {% endfor %}</li>
+      </ul>
+      </div>
+{% else %}
+  <!-- Button to  trigger Login modal -->
+<ul class="navbar-nav mr-auto">
+            <li>
+              <a type="button" class="nav-link text-white mx-2"  data-toggle="modal" data-target="#loginModal">Login</a>
+            </li>
+            <li>
+              <a type="button" class="nav-link text-white mx-2" data-toggle="modal" data-target="#signupModal">Signup</a>
+            </li>
+          </ul>
+{% endif %}
+
+
+        </div>
+      </nav>
+    </header>
+      {% for message in messages  %}            
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+            <strong>Message : </strong> {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+      {% endfor %}
+<!-- SignUp Modal -->
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="signupModalTitle">SignUp Here</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action= "/signup/" method='POST'>
+          {% csrf_token %}
+  <div class="form-group">
+    <label for="fname">First Name</label>
+    <input type="text" class="form-control" id="fname" name="fname" placeholder="Enter Your First Name" required>
+  </div>
+  <div class="form-group">
+    <label for="lname">Last Name</label>
+    <input type="text" class="form-control" id="lname" name="lname" placeholder="Enter Your Last Name" required>
+  </div>
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input type="email" class="form-control" id="username" name="username" placeholder="Choose a unique username" required>
+  </div>
+  <div class="form-group">
+    <label for="pass1">Choose a password</label>
+    <input type="password" class="form-control" id="pass1" name="pass1" placeholder="Choose Your Password" required>
+  </div>
+  <div class="form-group">
+    <label for="pass2">Confirm Password</label>
+    <input type="password" class="form-control" id="pass2" name="pass2" placeholder="Enter your password again" required>
+  </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+<div class="mt-3">
+  <a class="btn btn-success btn-block" type="button" href="{% url 'social:begin' 'github' %}">Continue with Github</a>
+  <a href="{% url 'social:begin' 'facebook' %}" class="btn btn-primary btn-block" type="button">Continue with Facebook</a>
+  <a href="#" class="btn btn-danger btn-block" type="button">Continue with Instagram</a>
+  {% load socialaccount %}
+  <a href="{% provider_login_url 'google' %}" class="btn btn-white border btn-block" type="button">Continue with Google</a>
+</div>
+</form>
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+      {% block body %}  {% endblock body %}
+
+
+
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalTitle">Login Here</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="/login/" method="POST"> {% csrf_token %}
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input type="email" class="form-control" id="loginusername" name="loginusername" placeholder="Enter your username "required>
+  </div>
+  <div class="form-group">
+    <label for="pass">Enter your password </label>
+    <input type="password" class="form-control" id="loginpassword" name="loginpassword" placeholder="Enter your password "required>
+  </div>
+ 
+         <div class="row">
+    <div class="col-md-4">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+          <div class="col-md-4 offset-md-4">
+        <a href="#  " class="mr-auto">Forgot Password?</a></div>
+      </div>
+</form>
+      </div>
+       <div class="modal-footer">
+      </div>
+
+    <!-- Optional JavaScript -->
+   <!--  <div class="row">
+    <div class="col-md-4">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+          <div class="col-md-4 offset-md-4">
+        <a href="" class="mr-auto">Forgot Password?</a></div>
+      </div> -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>

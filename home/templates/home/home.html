@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %} Home{% endblock title %}
+{% block homeactive %} active {% endblock homeactive%}">
+{% block body %}
+<div class="container mt-5">
+	<div class="jumbotron">
+  <h1 class="display-4">Welcome to Bloggers</h1>
+  <p class="lead">The best bloggers on the discussing content marketing. Each blog on the list was rated by our expert staff in terms of content strength, depth, regularity, and, to a very small extent, popularity, in terms of overall best marketing blogs..</p>
+  <hr class="my-4">
+  <p>A discussion or informational website published on the World Wide Web consisting of discrete, often informal diary-style text entries. Posts are typically displayed in reverse chronological order, so that the most recent post appears first, at the top of the web page.</p>
+  <a class="btn btn-primary btn-lg" href="/blog" role="button">Go to Blogs</a>
+</div>
+</div>
+<div class="container">
+<h2>Popular Blogposts</h2>
+<div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 my-4 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary">World</strong>
+          <h3 class="mb-0">Featured post</h3>
+          <div class="mb-1 text-muted">Nov 12</div>
+          <p class="card-text mb-auto">
+           Everybody loves a list. They’re easy to scan, have digestible information and they’re super popular for social media sharing.
+          </p>
+        </div>
+   <div class="col-auto d-none d-lg-block">
+          <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+        </div>     
+      </div>
+  </div>
+ {% endblock %}

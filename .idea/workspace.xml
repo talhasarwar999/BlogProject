@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f5eebb7f-e22f-4203-9ffc-314c014746c7" name="Default Changelist" comment="">
+      <change beforePath="$APPLICATION_HOME_DIR$/Ajax Crud/CrudAjax/ajaxcrud/templates/dfilters/crud.html" beforeDir="false" afterPath="$APPLICATION_HOME_DIR$/Ajax Crud/CrudAjax/ajaxcrud/templates/dfilters/crud.html" afterDir="false" />
+      <change beforePath="$APPLICATION_HOME_DIR$/Ajax Crud/CrudAjax/ajaxcrud/templates/dfilters/querys.html" beforeDir="false" afterPath="$APPLICATION_HOME_DIR$/Ajax Crud/CrudAjax/ajaxcrud/templates/dfilters/querys.html" afterDir="false" />
+      <change beforePath="$APPLICATION_HOME_DIR$/CosmosivicsaProject/CosmosivicsaApplication/filters.py" beforeDir="false" afterPath="$APPLICATION_HOME_DIR$/CosmosivicsaProject/CosmosivicsaApplication/filters.py" afterDir="false" />
+      <change beforePath="$APPLICATION_HOME_DIR$/CosmosivicsaProject/CosmosivicsaApplication/views.py" beforeDir="false" afterPath="$APPLICATION_HOME_DIR$/CosmosivicsaProject/CosmosivicsaApplication/views.py" afterDir="false" />
+      <change beforePath="$APPLICATION_HOME_DIR$/CosmosivicsaProject/CosmosivicsaProject/settings.py" beforeDir="false" afterPath="$APPLICATION_HOME_DIR$/CosmosivicsaProject/CosmosivicsaProject/settings.py" afterDir="false" />
+      <change beforePath="$APPLICATION_HOME_DIR$/CosmosivicsaProject/db.sqlite3" beforeDir="false" afterPath="$APPLICATION_HOME_DIR$/CosmosivicsaProject/db.sqlite3" afterDir="false" />
+      <change beforePath="$APPLICATION_HOME_DIR$/DjangoSerializers/DjangoSerializers/settings.py" beforeDir="false" afterPath="$APPLICATION_HOME_DIR$/DjangoSerializers/DjangoSerializers/settings.py" afterDir="false" />
+      <change beforePath="$APPLICATION_HOME_DIR$/DjangoSerializers/DjangoSerializers/urls.py" beforeDir="false" afterPath="$APPLICATION_HOME_DIR$/DjangoSerializers/DjangoSerializers/urls.py" afterDir="false" />
+      <change beforePath="$APPLICATION_HOME_DIR$/DjangoSerializers/db.sqlite3" beforeDir="false" afterPath="$APPLICATION_HOME_DIR$/DjangoSerializers/db.sqlite3" afterDir="false" />
+      <change beforePath="$APPLICATION_HOME_DIR$/DjangoSerializers/djangoser/admin.py" beforeDir="false" afterPath="$APPLICATION_HOME_DIR$/DjangoSerializers/djangoser/admin.py" afterDir="false" />
+      <change beforePath="$APPLICATION_HOME_DIR$/DjangoSerializers/djangoser/models.py" beforeDir="false" afterPath="$APPLICATION_HOME_DIR$/DjangoSerializers/djangoser/models.py" afterDir="false" />
+      <change beforePath="$APPLICATION_HOME_DIR$/DjangoSerializers/djangoser/myapp.py" beforeDir="false" afterPath="$APPLICATION_HOME_DIR$/DjangoSerializers/djangoser/myapp.py" afterDir="false" />
+      <change beforePath="$APPLICATION_HOME_DIR$/DjangoSerializers/djangoser/serializers.py" beforeDir="false" afterPath="$APPLICATION_HOME_DIR$/DjangoSerializers/djangoser/serializers.py" afterDir="false" />
+      <change beforePath="$APPLICATION_HOME_DIR$/DjangoSerializers/djangoser/urls.py" beforeDir="false" afterPath="$APPLICATION_HOME_DIR$/DjangoSerializers/djangoser/urls.py" afterDir="false" />
+      <change beforePath="$APPLICATION_HOME_DIR$/DjangoSerializers/djangoser/views.py" beforeDir="false" afterPath="$APPLICATION_HOME_DIR$/DjangoSerializers/djangoser/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Libraryman/library/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Libraryman/library/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$APPLICATION_HOME_DIR$/django-ajax-search" beforeDir="false" afterPath="$APPLICATION_HOME_DIR$/django-ajax-search" afterDir="false" />
+      <change beforePath="$APPLICATION_HOME_DIR$/dynamic_filter" beforeDir="false" afterPath="$APPLICATION_HOME_DIR$/dynamic_filter" afterDir="false" />
+      <change beforePath="$APPLICATION_HOME_DIR$/photo-gallery-tutorial" beforeDir="false" afterPath="$APPLICATION_HOME_DIR$/photo-gallery-tutorial" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$APPLICATION_HOME_DIR$" />
+  </component>
+  <component name="ProjectId" id="1lED6sivYhYkRAo26SN25pKNPHH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$APPLICATION_HOME_DIR$/SchoolAPI" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ittefaq\PyCharm Community Edition 2019.2.1\blogg\home" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f5eebb7f-e22f-4203-9ffc-314c014746c7" name="Default Changelist" comment="" />
+      <created>1607153184467</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607153184467</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/home/urls.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/home/urls.py</url>
+          <line>6</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
